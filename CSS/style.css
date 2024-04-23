@@ -1,0 +1,123 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+} 
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.sidebar{
+     background-color: black;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     color:white;
+     height:100vh ;
+    
+}
+
+.sidebar section{
+    display: flex;
+     flex-direction: column;
+
+}
+
+.sidebar span{
+    display: inline-block;
+    width: 3.5rem;
+    padding: 0.5rem;
+}
+
+.contenitore{
+    width: 576px;
+  
+}
+header {
+    display: flex;
+    background-color: #080b12;
+    justify-content: flex-end;
+    }
+
+    header button{
+        margin: 3rem 1rem 3rem 0rem;
+        height: 3.5rem;
+        width: 15rem;
+        
+    }
+     main{
+        background-color: #141922;
+        overflow: auto;
+        height: calc(100vh - 150px);
+     }
+   
+    main nav{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+    }
+    nav div{
+        padding: 2rem;
+    }
+    nav a {
+        
+        padding: 1rem;
+        text-decoration: none;
+        color: #5b5e64;
+    }
+    
+    .cards h1, h3{
+        color: white;
+
+    }
+    .cards h1{
+        padding-left: 0.5rem;
+    }
+    
+    .cards h3{
+        padding-top: 1rem;
+    }
+    .cards p{
+         padding-top: 0.5rem;
+        color: #75787d;
+    }
+    
+    .riga{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 2rem 0rem 0rem 1rem;
+    }
+    .immagine{
+        display: flex;
+        flex-direction: column;
+        width: 16rem;
+        height: 20rem;
+    }
+
+
+
+    footer{
+        
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+       
+        
+    }
+
+    .music-bar{
+        display: flex;
+        flex-direction: row;
+    }
+
+
+/******** S******/
+@media screen and (min-width:577px){
+
+   
+}
+

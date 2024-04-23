@@ -15,33 +15,44 @@
      flex-direction: column;
      justify-content: space-between;
      color:white;
-     height:100vh ;
+     height:calc(100vh - 90px ) ;
+     width: 60px;
     
 }
 
 .sidebar section{
     display: flex;
      flex-direction: column;
-
+     justify-content: flex-start;
 }
 
 .sidebar span{
-    display: inline-block;
-    width: 3.5rem;
-    padding: 0.5rem;
+    
+    margin-bottom: 1rem;
+   
 }
+
+.none{
+    display: none;
+}
+
 
 .contenitore{
     width: 576px;
   
 }
-header {
+.cta {
     display: flex;
     background-color: #080b12;
     justify-content: flex-end;
+    width: calc(100vw - 60px);
+    position: sticky;
+    top: 0;
+    
+    
     }
 
-    header button{
+    .cta button{
         margin: 3rem 1rem 3rem 0rem;
         height: 3.5rem;
         width: 15rem;
@@ -50,18 +61,19 @@ header {
      main{
         background-color: #141922;
         overflow: auto;
-        height: calc(100vh - 150px);
+        height: calc(100vh - 90px);
+        width: calc(100vw - 60px);
      }
    
-    main nav{
+    nav{
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
         justify-content: center;
         text-align: center;
-    }
-    nav div{
         padding: 2rem;
+        flex-wrap: wrap;
     }
+    
     nav a {
         
         padding: 1rem;
@@ -88,14 +100,16 @@ header {
     .riga{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        
+       
         padding: 2rem 0rem 0rem 1rem;
+        flex-wrap: wrap;
     }
-    .immagine{
+    .colonna{
         display: flex;
         flex-direction: column;
-        width: 16rem;
-        height: 20rem;
+        width: 10rem;
+        height: 16rem;
     }
 
 
@@ -106,6 +120,8 @@ header {
         flex-direction: row;
         justify-content: space-around;
         background-color:#282828 ;
+        width: 100vw;
+        height: 90px;
        
         
     }
@@ -113,12 +129,34 @@ header {
     .music-bar{
         display: flex;
         flex-direction: row;
+        justify-content: center;
     }
-
+  .music-bar span {
+    display: inline-block;
+}
 
 /******** S******/
 @media screen and (min-width:577px){
-
+      
    
+    .sidebar{
+        width: 200px;
+
+    }
+   
+    .none{
+        display: flex;
+        flex-direction: column;
+    }
+    
+    
+    
+    main{
+        width: calc(100vw - 158px);
+    }
+
+    .cta{
+        width: calc(100vw - 158px);
+    }
 }
 

@@ -2,11 +2,13 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
 } 
 
 .main-container{
     display: flex;
     flex-direction: row;
+    
 }
 
 .sidebar{
@@ -17,28 +19,60 @@
      color:white;
      height:calc(100vh - 90px ) ;
      width: 60px;
+     padding: 0;
+    
     
 }
-
-.sidebar section{
-    display: flex;
-     flex-direction: column;
-     justify-content: flex-start;
-}
-
-.sidebar span{
-    
-    margin-bottom: 1rem;
+.sidebar ul{
+   list-style:none ;
+   padding-bottom: 1rem;
+   display: block;
+   text-align: start;
    
+}
+.sidebar li{
+    padding: 0.5rem;
+    vertical-align: center;
+}
+.fa-plus-square{
+    font-size: 3rem;
+    color: #a3a3a3;
+}
+#playlist{
+    display: inline-block;
+    padding-bottom: 1rem;
+    vertical-align:center   ;
+}
+.sidebar img{
+    width: 30px;
+    height: 30px;
+}
+
+
+.logo{
+    display: flex;
+    flex-direction: row;
+    font-size: 2rem;
+    padding: 1rem 0rem 1rem 1rem;
+    
+    
+}
+.fa-spotify{
+    font-size: 2.1rem;
+    padding-right: 0.5rem;
 }
 
 .none{
     display: none;
 }
-
+.none-1{
+    display: none;
+}
 
 .contenitore{
-    width: 576px;
+    width:100vw;
+    flex-wrap: wrap;
+   
   
 }
 .cta {
@@ -54,9 +88,17 @@
 
     .cta button{
         margin: 3rem 1rem 3rem 0rem;
-        height: 3.5rem;
-        width: 15rem;
+        height: 2.5rem;
+        width: 13rem;
+        border-radius: 1.5rem;
+        background-color: #080b12;
+        border: solid 1px white;
+        color: white;
         
+    }
+    .cta button:hover{
+        height: 2.8rem;
+        width: 14rem;
     }
      main{
         background-color: #141922;
@@ -71,7 +113,7 @@
         justify-content: center;
         text-align: center;
         padding: 2rem;
-        flex-wrap: wrap;
+        flex-wrap:wrap;
     }
     
     nav a {
@@ -79,40 +121,103 @@
         padding: 1rem;
         text-decoration: none;
         color: #5b5e64;
+       
     }
+    nav a div{
+        width: 2rem;
+        height: 1.5px;
+        background-color: #c7ff31;
+        margin: 0.3rem 0rem 0rem 2.1rem;
+    }
+    nav a:hover{
+        color: white;
+    }
+    
+    
     
     .cards h1, h3{
         color: white;
 
     }
     .cards h1{
-        padding-left: 0.5rem;
+        padding-left: 1.5rem;
+        margin-top: 1rem;
     }
     
     .cards h3{
         padding-top: 1rem;
     }
+    .cards h4{
+        color: #75787d;
+        padding: 1rem 0rem 0rem 1.5rem;
+    }
     .cards p{
          padding-top: 0.5rem;
         color: #75787d;
     }
+    .cards img{
+        opacity: 1;
+    }
+    .img-size img:hover {
+        opacity: 0.2;
+       
+    }
+    
+    .playbutton{
+        display: none;
+        
+        position: relative;
+        bottom: 7rem;
+        left: 3rem;
+        font-size: 4rem;
+        color: white;
+    }
+    .img-size:hover .playbutton{
+        display: flex;
+        color: white;
+        opacity: 1;
+    }
+    
     
     .riga{
         display: flex;
         flex-direction: row;
         
        
-        padding: 2rem 0rem 0rem 1rem;
+        padding: 2rem 0rem 1.5rem 1rem;
         flex-wrap: wrap;
     }
+    
     .colonna{
         display: flex;
         flex-direction: column;
         width: 10rem;
         height: 16rem;
+        margin: 1rem;
+        text-align: center;
+    }
+    
+    .img-size{
+        
+        width: 160px;
+        height: 160px;
+        object-fit: cover;
+        text-align: center;
+    }
+    .img-size img{
+        width: 160px;
+        height: 160px;
+        display: inline-block;
+    }
+    
+    #jhon {
+        padding-top: 3rem;
     }
 
-
+.circle{
+    border-radius: 50%;
+    
+}
 
     footer{
         
@@ -140,23 +245,57 @@
       
    
     .sidebar{
-        width: 200px;
+      width: 250px;
 
     }
-   
+   .none-1{
+    display: inline;
+   }
     .none{
         display: flex;
         flex-direction: column;
+        
     }
     
-    
-    
-    main{
-        width: calc(100vw - 158px);
+    .none li{
+        padding-left: 1.7rem;
     }
+    
+  main{
+    width: calc(100vw - 158px);
+  }
 
     .cta{
         width: calc(100vw - 158px);
     }
 }
 
+@media screen and (min-width:768px){
+ footer{
+    width: 100vw;
+        
+ }
+ 
+
+}
+@media screen and (min-width:992px){
+   
+   
+    .sidebar{
+    width: 250px;
+   }
+    
+    
+    footer{
+        width: 100vw;
+            
+     }
+    
+    .contenitore{
+        width: calc(100vw - 250px);
+    }
+    main{
+        width: calc(100vw - 250px);
+        
+    }
+}
